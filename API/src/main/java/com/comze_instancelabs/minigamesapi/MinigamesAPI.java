@@ -282,7 +282,7 @@ public class MinigamesAPI extends JavaPlugin implements PluginMessageListener, L
         
         if (this.getConfig().getBoolean(PluginConfigStrings.AUTO_UPDATING))
         {
-            // new UpdaterBukkit(this, 83025, this.getFile(), UpdaterBukkit.UpdateType.DEFAULT, false);
+             new UpdaterBukkit(this, 83025, this.getFile(), UpdaterBukkit.UpdateType.DEFAULT, false);
             new UpdaterNexus(this, this.getFile());
         }
         
@@ -1164,8 +1164,8 @@ public class MinigamesAPI extends JavaPlugin implements PluginMessageListener, L
                             final Player p = (Player) sender;
                             if (p.isOp())
                             {
-                                // final PluginInstance pli = MinigamesAPI.pinstances.get(Bukkit.getPluginManager().getPlugin("MGSkyWars")); //$NON-NLS-1$
-                                // BungeeSocket.sendSignUpdate(pli, pli.getArenas().get(0));
+                                 final PluginInstance pli = MinigamesAPI.pinstances.get(Bukkit.getPluginManager().getPlugin("MGSkyWars")); //$NON-NLS-1$
+                                 BungeeSocket.sendSignUpdate(pli, pli.getArenas().get(0));
                                 return false;
                             }
                         }
